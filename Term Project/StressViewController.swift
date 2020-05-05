@@ -8,11 +8,19 @@
 
 import UIKit
 
-class StressViewController: UIViewController {
+class StressViewController: UIViewController, UIGestureRecognizerDelegate {
 
+    
+    @IBAction func HandleSwipe(_ sender: UISwipeGestureRecognizer)
+    {
+        print("Left Swipe Gesture Recognized")
+        self.tabBarController?.selectedIndex += 1
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
     }
 
 

@@ -10,7 +10,7 @@
         <!--Stress Value-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="StressViewController" customModule="Term_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StressView" id="9pv-A4-QxB" customClass="StressViewController" customModule="Term_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,6 +28,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
@@ -35,17 +36,25 @@
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="3zm-q9-bmn" appends="YES" id="3Gq-WE-sfY"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stress Value" image="book" catalog="system" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="3zm-q9-bmn">
+                    <connections>
+                        <action selector="HandleSwipe:" destination="9pv-A4-QxB" id="aEM-vT-n1U"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="749" y="-658"/>
         </scene>
         <!--Health-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="HealthViewController" customModule="Term_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HealthView" id="8rJ-Kc-sve" customClass="HealthViewController" customModule="Term_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,6 +72,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
@@ -70,28 +80,51 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="qic-HV-KSW" appends="YES" id="1Xf-Yn-pcy"/>
+                            <outletCollection property="gestureRecognizers" destination="XC2-HH-UVt" appends="YES" id="HYZ-xc-TXA"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Health" image="heart" catalog="system" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="qic-HV-KSW">
+                    <connections>
+                        <action selector="HandleSwipe:" destination="8rJ-Kc-sve" id="rEl-T1-pIZ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="XC2-HH-UVt">
+                    <connections>
+                        <action selector="HandleSwipe:" destination="8rJ-Kc-sve" id="s2m-90-MDl"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="749" y="0.0"/>
         </scene>
         <!--Exercise-->
         <scene sceneID="khl-Vi-Zww">
             <objects>
-                <viewController id="dvy-Oo-GHo" customClass="ExerciseViewController" customModule="Term_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExerciseView" id="dvy-Oo-GHo" customClass="ExerciseViewController" customModule="Term_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dmw-06-cxY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="WhX-iK-uKu"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="G4D-rn-FTB" appends="YES" id="33u-Kj-GS6"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Exercise" image="sun.haze" catalog="system" id="TwR-AO-KOu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="npf-yN-cb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="G4D-rn-FTB">
+                    <connections>
+                        <action selector="HandleSwipe:" destination="dvy-Oo-GHo" id="Esc-Dp-J76"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="748" y="658"/>
+            <point key="canvasLocation" x="748" y="725"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

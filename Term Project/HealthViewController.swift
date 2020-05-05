@@ -8,8 +8,20 @@
 
 import UIKit
 
-class HealthViewController: UIViewController {
+class HealthViewController: UIViewController, UIGestureRecognizerDelegate {
 
+    @IBAction func HandleSwipe(_ sender: UISwipeGestureRecognizer)
+    {
+        if sender.direction == .left {
+            print("Left Swipe Gesture Recognized")
+            self.tabBarController?.selectedIndex += 1
+        }
+        else if sender.direction == .right{
+            print("Right Swipe Gesture Recognized")
+            self.tabBarController?.selectedIndex -= 1
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

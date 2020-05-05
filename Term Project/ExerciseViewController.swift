@@ -8,8 +8,14 @@
 
 import UIKit
 
-class ExerciseViewController: UIViewController {
+class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate {
 
+    @IBAction func HandleSwipe(_ sender: UISwipeGestureRecognizer)
+    {
+        print("right Swipe Gesture Recognized")
+        self.tabBarController?.selectedIndex -= 1
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
