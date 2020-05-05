@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  StressViewController.swift
 //  Term Project
 //
 //  Created by Yatin Singla on 5/5/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class StressViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

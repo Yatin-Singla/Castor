@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  HealthViewController.swift
 //  Term Project
 //
 //  Created by Yatin Singla on 5/5/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class HealthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
