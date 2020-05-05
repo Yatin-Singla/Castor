@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert,.badge,.sound],
+        completionHandler: { (granted, error) in
+        // Enable features based on authorization
+        })
         return true
     }
 
