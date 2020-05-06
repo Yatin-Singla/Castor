@@ -8,16 +8,37 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        UNUserNotificationCenter.current().delegate = self
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("user responded to notification")
+        // Do stuff with response here (non-blocking)
+        let tabVC = self.window?.rootViewController as! UITabBarController
+        if let mainVC = tabVC.viewControllers![0] as? StressViewController {
+            mainVC.handleNotification(response)
+        }
+        completionHandler()
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification, withCompletionHandler
+        completionHandler: @escaping (UNNotificationPresentationOptions)
+        -> Void)
+    {
+        print("received notification while in foreground; display?")
+        completionHandler([.alert]) // no options ([]) means no notification
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

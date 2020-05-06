@@ -10,20 +10,32 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert,.badge,.sound],
-        completionHandler: { (granted, error) in
-        // Enable features based on authorization
+                                    completionHandler: { (granted, error) in
+                                        // Enable features based on authorization
         })
+        UNUserNotificationCenter.current().delegate = self
         return true
     }
 
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("user responded to notification")
+        // Do stuff with response here (non-blocking)
+        let navVC = UIApplication.shared.windows.first!.rootViewController as!
+        UITabBarController
+        if let mainVC = navVC.viewControllers![0] as? StressViewController {
+            mainVC.handleNotification(response)
+        }
+        completionHandler()
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
