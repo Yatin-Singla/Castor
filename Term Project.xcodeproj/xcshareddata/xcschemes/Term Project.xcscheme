@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A9D4CA17246155CC0021B232"
-               BuildableName = "Term Project.app"
+               BuildableName = "Castor.app"
                BlueprintName = "Term Project"
                ReferencedContainer = "container:Term Project.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9D4CA17246155CC0021B232"
-            BuildableName = "Term Project.app"
+            BuildableName = "Castor.app"
             BlueprintName = "Term Project"
             ReferencedContainer = "container:Term Project.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9D4CA17246155CC0021B232"
-            BuildableName = "Term Project.app"
+            BuildableName = "Castor.app"
             BlueprintName = "Term Project"
             ReferencedContainer = "container:Term Project.xcodeproj">
          </BuildableReference>

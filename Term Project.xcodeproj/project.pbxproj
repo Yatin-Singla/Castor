@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A94E972B2464337A00A40D8E /* spotifylogo-32.png in Resources */ = {isa = PBXBuildFile; fileRef = A94E972A2464337A00A40D8E /* spotifylogo-32.png */; };
 		A9D4CA1C246155CC0021B232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CA1B246155CC0021B232 /* AppDelegate.swift */; };
 		A9D4CA1E246155CC0021B232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CA1D246155CC0021B232 /* SceneDelegate.swift */; };
 		A9D4CA20246155CC0021B232 /* StressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CA1F246155CC0021B232 /* StressViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A94E972A2464337A00A40D8E /* spotifylogo-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spotifylogo-32.png"; sourceTree = "<group>"; };
 		A9D4CA18246155CC0021B232 /* Castor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Castor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D4CA1B246155CC0021B232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9D4CA1D246155CC0021B232 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				A9D4CA3624615ADF0021B232 /* ExerciseViewController.swift */,
 				A9D4CA23246155CC0021B232 /* Main.storyboard */,
 				A9D4CA29246155D20021B232 /* Assets.xcassets */,
+				A94E972A2464337A00A40D8E /* spotifylogo-32.png */,
 				A9D4CA2B246155D20021B232 /* LaunchScreen.storyboard */,
 				A9D4CA2E246155D20021B232 /* Info.plist */,
 				A9D4CA26246155CC0021B232 /* Term_Project.xcdatamodeld */,
@@ -136,6 +139,7 @@
 			files = (
 				A9D4CA2D246155D20021B232 /* LaunchScreen.storyboard in Resources */,
 				A9D4CA2A246155D20021B232 /* Assets.xcassets in Resources */,
+				A94E972B2464337A00A40D8E /* spotifylogo-32.png in Resources */,
 				A9D4CA25246155CC0021B232 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
