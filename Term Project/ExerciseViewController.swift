@@ -16,6 +16,9 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var ArtistTitle: UILabel!
     @IBOutlet weak var TrackSlider: UISlider!
     @IBOutlet weak var PlayPause: UIButton!
+    @IBOutlet weak var Next: UIButton!
+    @IBOutlet weak var Previous: UIButton!
+    @IBOutlet weak var LoginBtn: UIButton!
     
     @IBAction func PlayPauseTapped(_ sender: UIButton) {
     }
@@ -23,15 +26,22 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     @IBAction func PreviousTapped(_ sender: UIButton) {
     }
-    @IBOutlet weak var LoginBtn: UIButton!
+
     @IBAction func LoginBtnTapped(_ sender: UIButton) {
+        print("btn tapped")
     }
     
     @IBAction func HandleSwipe(_ sender: UISwipeGestureRecognizer)
-    {
-        print("right Swipe Gesture Recognized")
-        self.tabBarController?.selectedIndex -= 1
-    }
+       {
+           if sender.direction == .left {
+               print("Left Swipe Gesture Recognized")
+               self.tabBarController?.selectedIndex += 1
+           }
+           else if sender.direction == .right{
+               print("Right Swipe Gesture Recognized")
+               self.tabBarController?.selectedIndex -= 1
+           }
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,9 +58,19 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate {
         LoginBtn.imageEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 8.0)
         LoginBtn.adjustsImageWhenHighlighted = false
         LoginBtn.setImage(UIImage(named: "spotifylogo-32.png"), for: .normal)
-        
+        isHidden(value: true)
     }
 
+    func isHidden(value: Bool){
+        CoverImage.isHidden = value
+        TrackTitle.isHidden = value
+        ArtistTitle.isHidden = value
+        TrackSlider.isHidden = value
+        PlayPause.isHidden = value
+        Next.isHidden = value
+        Previous.isHidden = value
+        LoginBtn.isHidden = !value
+    }
 
     /*
     // MARK: - Navigation

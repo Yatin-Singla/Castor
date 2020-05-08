@@ -40,7 +40,7 @@ class StressViewController: UIViewController, UIGestureRecognizerDelegate {
         content.body = "We think you're getting a bit agitated. Let's listen to some relaxing music, shall we?"
         content.userInfo["message"] = "Anxiety Attack"
         // Configure trigger for 5 seconds from now
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0,
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1.0,
                                                         repeats: false)
         // Create request
         let request = UNNotificationRequest(identifier: content.userInfo["message"] as! String,
@@ -57,7 +57,7 @@ class StressViewController: UIViewController, UIGestureRecognizerDelegate {
     func handleNotification(_ response: UNNotificationResponse) {
         let message = response.notification.request.content.userInfo["message"] as! String
         print("received notification message: \(message)")
-        self.tabBarController?.selectedIndex = 2
+        self.tabBarController?.selectedIndex = 3
     }
     
     /*+    @objc func AnxietyPredicted(notification: NSNotification)

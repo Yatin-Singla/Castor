@@ -221,6 +221,7 @@
                         <viewLayoutGuide key="safeArea" id="WhX-iK-uKu"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="G4D-rn-FTB" appends="YES" id="33u-Kj-GS6"/>
+                            <outletCollection property="gestureRecognizers" destination="eQa-Is-erQ" appends="YES" id="JlV-IZ-4sp"/>
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Music" image="music.note" catalog="system" id="TwR-AO-KOu"/>
@@ -228,7 +229,9 @@
                         <outlet property="ArtistTitle" destination="ddO-jc-Bkb" id="wqd-ta-YcC"/>
                         <outlet property="CoverImage" destination="HbH-Zr-vkU" id="sG7-a7-ye3"/>
                         <outlet property="LoginBtn" destination="Seh-YH-hf9" id="9Cn-pW-AN7"/>
+                        <outlet property="Next" destination="qXA-5M-8jX" id="Xdl-af-61N"/>
                         <outlet property="PlayPause" destination="prg-rf-uzw" id="W14-lB-hDm"/>
+                        <outlet property="Previous" destination="as8-HJ-ziZ" id="W0k-Eb-Hcy"/>
                         <outlet property="TrackSlider" destination="4kJ-tR-Pd7" id="UDC-H4-IQq"/>
                         <outlet property="TrackTitle" destination="Xf6-dp-3od" id="sdD-50-vGv"/>
                     </connections>
@@ -239,8 +242,96 @@
                         <action selector="HandleSwipe:" destination="dvy-Oo-GHo" id="Esc-Dp-J76"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="eQa-Is-erQ">
+                    <connections>
+                        <action selector="HandleSwipe:" destination="dvy-Oo-GHo" id="qwT-ui-jJ4"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="747.82608695652175" y="724.55357142857144"/>
+        </scene>
+        <!--Titles-->
+        <scene sceneID="IMa-vZ-X9l">
+            <objects>
+                <tableViewController id="moP-US-fn6" customClass="TableViewController" customModule="Castor" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tB2-uC-XJA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CustomCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="120" id="SL7-ek-uvV" customClass="TableViewCell" customModule="Castor" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SL7-ek-uvV" id="uLc-Zg-5d8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4S8-28-YYp">
+                                            <rect key="frame" x="20" y="15" width="374" height="26"/>
+                                            <gestureRecognizers/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="LGp-YS-9ev"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJV-bJ-k75">
+                                            <rect key="frame" x="20" y="83" width="374" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="tlR-Rk-CGx"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlc-5v-w3I">
+                                            <rect key="frame" x="20" y="49" width="374" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="zUr-8h-bgw"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qlc-5v-w3I" firstAttribute="trailing" secondItem="uLc-Zg-5d8" secondAttribute="trailingMargin" id="1cM-Zu-izb"/>
+                                        <constraint firstItem="4S8-28-YYp" firstAttribute="leading" secondItem="uLc-Zg-5d8" secondAttribute="leadingMargin" id="6Rp-RX-Zwu"/>
+                                        <constraint firstItem="4S8-28-YYp" firstAttribute="centerX" secondItem="uLc-Zg-5d8" secondAttribute="centerX" id="NER-yX-Egb"/>
+                                        <constraint firstItem="iJV-bJ-k75" firstAttribute="top" secondItem="qlc-5v-w3I" secondAttribute="bottom" constant="8" id="OpN-DT-2Fr"/>
+                                        <constraint firstItem="iJV-bJ-k75" firstAttribute="trailing" secondItem="uLc-Zg-5d8" secondAttribute="trailingMargin" id="Xg7-Dy-4fG"/>
+                                        <constraint firstItem="iJV-bJ-k75" firstAttribute="leading" secondItem="uLc-Zg-5d8" secondAttribute="leadingMargin" id="aRW-nQ-MCI"/>
+                                        <constraint firstItem="qlc-5v-w3I" firstAttribute="top" secondItem="4S8-28-YYp" secondAttribute="bottom" constant="8" id="egk-Aw-Zt6"/>
+                                        <constraint firstItem="4S8-28-YYp" firstAttribute="trailing" secondItem="uLc-Zg-5d8" secondAttribute="trailingMargin" id="gho-mi-uge"/>
+                                        <constraint firstItem="qlc-5v-w3I" firstAttribute="leading" secondItem="uLc-Zg-5d8" secondAttribute="leadingMargin" id="mmU-Ki-ts5"/>
+                                        <constraint firstItem="4S8-28-YYp" firstAttribute="top" secondItem="uLc-Zg-5d8" secondAttribute="topMargin" constant="4" id="nkz-JA-she"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="Album" destination="iJV-bJ-k75" id="EJa-qj-18T"/>
+                                    <outlet property="ArtistName" destination="qlc-5v-w3I" id="8dt-Mo-9yS"/>
+                                    <outlet property="TrackLabel" destination="4S8-28-YYp" id="ssA-4t-2mD"/>
+                                    <outletCollection property="gestureRecognizers" destination="Tqr-6D-wYu" appends="YES" id="X0P-bL-XLC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="moP-US-fn6" id="2HL-Ms-4OL"/>
+                            <outlet property="delegate" destination="moP-US-fn6" id="hr4-K5-MUX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Titles" prompt="Stress Relieving Songs" id="ood-nR-hNb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJN-MD-Eam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Tqr-6D-wYu">
+                    <connections>
+                        <action selector="HandleSwipe:" destination="moP-US-fn6" id="HMM-z2-YHS"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2442.0289855072465" y="724.55357142857144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -255,11 +346,31 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="dvy-Oo-GHo" kind="relationship" relationship="viewControllers" id="MsS-51-p77"/>
+                        <segue destination="ViE-r6-OCQ" kind="relationship" relationship="viewControllers" id="iJD-91-JEt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Titles-->
+        <scene sceneID="NO9-rB-FyF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ViE-r6-OCQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Titles" image="list.bullet.indent" catalog="system" id="4qi-aL-IEg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="auK-cE-Sf1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="moP-US-fn6" kind="relationship" relationship="rootViewController" id="K7l-Z1-9GF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09Z-Bf-VOu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1531.8840579710145" y="724.55357142857144"/>
         </scene>
     </scenes>
     <resources>
@@ -267,6 +378,7 @@
         <image name="book" catalog="system" width="128" height="101"/>
         <image name="forward.end.fill" catalog="system" width="128" height="102"/>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="list.bullet.indent" catalog="system" width="128" height="74"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
         <image name="pause.circle.fill" catalog="system" width="128" height="121"/>
     </resources>

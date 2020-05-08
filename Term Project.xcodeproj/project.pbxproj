@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A94E972B2464337A00A40D8E /* spotifylogo-32.png in Resources */ = {isa = PBXBuildFile; fileRef = A94E972A2464337A00A40D8E /* spotifylogo-32.png */; };
+		A94E979124648AD600A40D8E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E979024648AD600A40D8E /* TableViewController.swift */; };
+		A94E979324648EA600A40D8E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E979224648EA600A40D8E /* TableViewCell.swift */; };
+		A94E97952464935200A40D8E /* SongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E97942464935200A40D8E /* SongItem.swift */; };
 		A9D4CA1C246155CC0021B232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CA1B246155CC0021B232 /* AppDelegate.swift */; };
 		A9D4CA1E246155CC0021B232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CA1D246155CC0021B232 /* SceneDelegate.swift */; };
 		A9D4CA20246155CC0021B232 /* StressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CA1F246155CC0021B232 /* StressViewController.swift */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		A94E972A2464337A00A40D8E /* spotifylogo-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spotifylogo-32.png"; sourceTree = "<group>"; };
+		A94E979024648AD600A40D8E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		A94E979224648EA600A40D8E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		A94E97942464935200A40D8E /* SongItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongItem.swift; sourceTree = "<group>"; };
 		A9D4CA18246155CC0021B232 /* Castor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Castor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D4CA1B246155CC0021B232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9D4CA1D246155CC0021B232 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +75,9 @@
 				A9D4CA1F246155CC0021B232 /* StressViewController.swift */,
 				A9D4CA21246155CC0021B232 /* HealthViewController.swift */,
 				A9D4CA3624615ADF0021B232 /* ExerciseViewController.swift */,
+				A94E979024648AD600A40D8E /* TableViewController.swift */,
+				A94E979224648EA600A40D8E /* TableViewCell.swift */,
+				A94E97942464935200A40D8E /* SongItem.swift */,
 				A9D4CA23246155CC0021B232 /* Main.storyboard */,
 				A9D4CA29246155D20021B232 /* Assets.xcassets */,
 				A94E972A2464337A00A40D8E /* spotifylogo-32.png */,
@@ -152,7 +161,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9D4CA28246155CC0021B232 /* Term_Project.xcdatamodeld in Sources */,
+				A94E979324648EA600A40D8E /* TableViewCell.swift in Sources */,
+				A94E979124648AD600A40D8E /* TableViewController.swift in Sources */,
 				A9D4CA22246155CC0021B232 /* HealthViewController.swift in Sources */,
+				A94E97952464935200A40D8E /* SongItem.swift in Sources */,
 				A9D4CA20246155CC0021B232 /* StressViewController.swift in Sources */,
 				A9D4CA1C246155CC0021B232 /* AppDelegate.swift in Sources */,
 				A9D4CA3724615ADF0021B232 /* ExerciseViewController.swift in Sources */,
