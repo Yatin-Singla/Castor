@@ -17,7 +17,7 @@ class LandingPageViewController: UIViewController {
     @IBOutlet weak var LoginBtn: UIButton!
     @IBOutlet weak var SignUpBtn: UIButton!
     
-    let SignUpBtnColor = UIColor(red: 0.25, green: 0.27, blue: 0.40, alpha: 1.00)
+    private let SignUpBtnColor = UIColor(red: 0.25, green: 0.27, blue: 0.40, alpha: 1.00)
     private let SignUpBtnBorderColor = UIColor(red: 0.69, green: 0.70, blue: 0.78, alpha: 1.00)
     private let TintColor = UIColor(red: 1.00, green: 0.35, blue: 0.40, alpha: 1.00)
     private let TitleFont = UIFont.boldSystemFont(ofSize: 30)
@@ -67,5 +67,8 @@ class LandingPageViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func unwindSegue(sender: UIStoryboardSegue) {
+    }
 
 }
