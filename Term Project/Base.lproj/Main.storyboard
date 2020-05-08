@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Loa-bU-dMf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -107,7 +107,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="749" y="0.0"/>
+            <point key="canvasLocation" x="1657.9710144927537" y="0.0"/>
         </scene>
         <!--Music-->
         <scene sceneID="khl-Vi-Zww">
@@ -339,6 +339,79 @@
             </objects>
             <point key="canvasLocation" x="2442.0289855072465" y="724.55357142857144"/>
         </scene>
+        <!--Landing Page View Controller-->
+        <scene sceneID="hge-Ml-l3N">
+            <objects>
+                <viewController id="gDn-3f-arU" customClass="LandingPageViewController" customModule="Castor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MAR-8j-U1u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Castor" translatesAutoresizingMaskIntoConstraints="NO" id="MUe-Cf-OOC">
+                                <rect key="frame" x="140" y="188" width="134.5" height="134.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MUe-Cf-OOC" secondAttribute="height" multiplier="1:1" id="Zt8-ud-MD7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Castor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbS-LD-Ess">
+                                <rect key="frame" x="134" y="352.5" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intuitive Stress Management Application" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDD-Sj-0GM">
+                                <rect key="frame" x="53" y="403.5" width="308" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Su9-mD-prd">
+                                <rect key="frame" x="69.5" y="524.5" width="275" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Ibx-4m-jGG"/>
+                                    <constraint firstAttribute="width" constant="275" id="eFq-T1-dEh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfL-XO-zQg">
+                                <rect key="frame" x="69.5" y="609.5" width="275" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="E3Y-sU-g9j"/>
+                                    <constraint firstAttribute="width" constant="275" id="KTa-tI-q6D"/>
+                                    <constraint firstAttribute="height" constant="55" id="riC-Ee-i5F"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="znL-Ry-2bY"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hfL-XO-zQg" firstAttribute="centerX" secondItem="MAR-8j-U1u" secondAttribute="centerX" id="2C5-1b-2CR"/>
+                            <constraint firstItem="TbS-LD-Ess" firstAttribute="top" secondItem="MUe-Cf-OOC" secondAttribute="bottom" constant="30" id="3Gy-XX-npu"/>
+                            <constraint firstItem="TbS-LD-Ess" firstAttribute="centerX" secondItem="MAR-8j-U1u" secondAttribute="centerX" id="Aph-Sp-goG"/>
+                            <constraint firstItem="MUe-Cf-OOC" firstAttribute="top" secondItem="uGf-6M-Db7" secondAttribute="top" constant="100" id="DPY-8y-Rix"/>
+                            <constraint firstItem="YDD-Sj-0GM" firstAttribute="top" secondItem="TbS-LD-Ess" secondAttribute="bottom" constant="30" id="K6l-SB-rOS"/>
+                            <constraint firstItem="YDD-Sj-0GM" firstAttribute="centerX" secondItem="MAR-8j-U1u" secondAttribute="centerX" id="Z6W-d4-VAj"/>
+                            <constraint firstItem="Su9-mD-prd" firstAttribute="top" secondItem="YDD-Sj-0GM" secondAttribute="bottom" constant="100" id="jad-a0-5Hb"/>
+                            <constraint firstItem="MUe-Cf-OOC" firstAttribute="centerX" secondItem="MAR-8j-U1u" secondAttribute="centerX" id="kj0-du-Ejh"/>
+                            <constraint firstItem="Su9-mD-prd" firstAttribute="centerX" secondItem="MAR-8j-U1u" secondAttribute="centerX" id="oef-N1-S34"/>
+                            <constraint firstItem="hfL-XO-zQg" firstAttribute="top" secondItem="Su9-mD-prd" secondAttribute="bottom" constant="30" id="qvD-w1-jzq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uGf-6M-Db7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eYF-Eb-BiT"/>
+                    <connections>
+                        <outlet property="LoginBtn" destination="Su9-mD-prd" id="GCe-i5-szf"/>
+                        <outlet property="LogoImageView" destination="MUe-Cf-OOC" id="vsP-gD-7Mz"/>
+                        <outlet property="SignUpBtn" destination="hfL-XO-zQg" id="cYC-5L-pn2"/>
+                        <outlet property="SubtitleLabel" destination="YDD-Sj-0GM" id="cIT-eN-1PD"/>
+                        <outlet property="TitleLabel" destination="TbS-LD-Ess" id="Gbx-55-ogg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9GL-Q2-O6a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447.82608695652175" y="0.0"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -357,7 +430,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="910.14492753623199" y="0.0"/>
         </scene>
         <!--Titles-->
         <scene sceneID="NO9-rB-FyF">
@@ -378,8 +451,27 @@
             </objects>
             <point key="canvasLocation" x="1531.8840579710145" y="724.55357142857144"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cMU-wc-8LU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Loa-bU-dMf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ihu-XA-f6d">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gDn-3f-arU" kind="relationship" relationship="rootViewController" id="6eV-ba-M3Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yaM-9N-vxn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1357.9710144927537" y="0.0"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Castor" width="134.5" height="134.5"/>
         <image name="backward.end.fill" catalog="system" width="128" height="102"/>
         <image name="book" catalog="system" width="128" height="101"/>
         <image name="forward.end.fill" catalog="system" width="128" height="102"/>

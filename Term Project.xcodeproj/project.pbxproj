@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		A94E979324648EA600A40D8E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E979224648EA600A40D8E /* TableViewCell.swift */; };
 		A94E97952464935200A40D8E /* SongItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E97942464935200A40D8E /* SongItem.swift */; };
 		A94E9797246574AF00A40D8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A94E9796246574AE00A40D8E /* GoogleService-Info.plist */; };
+		A94E979A2465C82300A40D8E /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E97992465C82300A40D8E /* UITextField.swift */; };
+		A94E979C2465C88900A40D8E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E979B2465C88900A40D8E /* UIButton.swift */; };
+		A94E979E2465C90200A40D8E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E979D2465C90200A40D8E /* CustomTextField.swift */; };
+		A94E97A12465CB5C00A40D8E /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E97A02465CB5C00A40D8E /* LandingPageViewController.swift */; };
 		A9D4CA1C246155CC0021B232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CA1B246155CC0021B232 /* AppDelegate.swift */; };
 		A9D4CA1E246155CC0021B232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CA1D246155CC0021B232 /* SceneDelegate.swift */; };
 		A9D4CA20246155CC0021B232 /* StressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CA1F246155CC0021B232 /* StressViewController.swift */; };
@@ -31,6 +35,10 @@
 		A94E979224648EA600A40D8E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		A94E97942464935200A40D8E /* SongItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongItem.swift; sourceTree = "<group>"; };
 		A94E9796246574AE00A40D8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A94E97992465C82300A40D8E /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		A94E979B2465C88900A40D8E /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		A94E979D2465C90200A40D8E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A94E97A02465CB5C00A40D8E /* LandingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 		A9D4CA18246155CC0021B232 /* Castor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Castor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D4CA1B246155CC0021B232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9D4CA1D246155CC0021B232 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +74,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A94E97982465C7E900A40D8E /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				A94E97992465C82300A40D8E /* UITextField.swift */,
+				A94E979B2465C88900A40D8E /* UIButton.swift */,
+				A94E979D2465C90200A40D8E /* CustomTextField.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		A94E979F2465C92C00A40D8E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A9D4CA1F246155CC0021B232 /* StressViewController.swift */,
+				A9D4CA21246155CC0021B232 /* HealthViewController.swift */,
+				A9D4CA3624615ADF0021B232 /* ExerciseViewController.swift */,
+				A94E979024648AD600A40D8E /* TableViewController.swift */,
+				A94E97A02465CB5C00A40D8E /* LandingPageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		A9D4CA0F246155CC0021B232 = {
 			isa = PBXGroup;
 			children = (
@@ -87,12 +117,10 @@
 		A9D4CA1A246155CC0021B232 /* Term Project */ = {
 			isa = PBXGroup;
 			children = (
+				A94E97982465C7E900A40D8E /* Controls */,
+				A94E979F2465C92C00A40D8E /* ViewControllers */,
 				A9D4CA1B246155CC0021B232 /* AppDelegate.swift */,
 				A9D4CA1D246155CC0021B232 /* SceneDelegate.swift */,
-				A9D4CA1F246155CC0021B232 /* StressViewController.swift */,
-				A9D4CA21246155CC0021B232 /* HealthViewController.swift */,
-				A9D4CA3624615ADF0021B232 /* ExerciseViewController.swift */,
-				A94E979024648AD600A40D8E /* TableViewController.swift */,
 				A94E979224648EA600A40D8E /* TableViewCell.swift */,
 				A94E97942464935200A40D8E /* SongItem.swift */,
 				A9D4CA23246155CC0021B232 /* Main.storyboard */,
@@ -112,7 +140,6 @@
 				C591E92F6F851A4A5140D24A /* Pods-Term Project.debug.xcconfig */,
 				E52F9F318B9CC1DD19433A6C /* Pods-Term Project.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -233,13 +260,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A94E979E2465C90200A40D8E /* CustomTextField.swift in Sources */,
 				A9D4CA28246155CC0021B232 /* Term_Project.xcdatamodeld in Sources */,
+				A94E979A2465C82300A40D8E /* UITextField.swift in Sources */,
 				A94E979324648EA600A40D8E /* TableViewCell.swift in Sources */,
+				A94E97A12465CB5C00A40D8E /* LandingPageViewController.swift in Sources */,
 				A94E979124648AD600A40D8E /* TableViewController.swift in Sources */,
 				A9D4CA22246155CC0021B232 /* HealthViewController.swift in Sources */,
 				A94E97952464935200A40D8E /* SongItem.swift in Sources */,
 				A9D4CA20246155CC0021B232 /* StressViewController.swift in Sources */,
 				A9D4CA1C246155CC0021B232 /* AppDelegate.swift in Sources */,
+				A94E979C2465C88900A40D8E /* UIButton.swift in Sources */,
 				A9D4CA3724615ADF0021B232 /* ExerciseViewController.swift in Sources */,
 				A9D4CA1E246155CC0021B232 /* SceneDelegate.swift in Sources */,
 			);
