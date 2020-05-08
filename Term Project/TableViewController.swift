@@ -13,7 +13,15 @@ class TableViewController: UITableViewController, UIGestureRecognizerDelegate {
     var Songs: [SongItem]! = []
     var MusixMatchApiKey = "e8d4803ab4dfe4ca52b34095a92773e0"
     var MusixMatchSearchURL: String!
+    var page: Int! = 1
     
+    @IBAction func RefreshTapped(_ sender: UIBarButtonItem) {
+        print("refresh tapped")
+        self.page += 1
+        Songs.removeAll()
+        updateSearchURL()
+        getSongs()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,9 +33,12 @@ class TableViewController: UITableViewController, UIGestureRecognizerDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 120
-        MusixMatchSearchURL = "https://api.musixmatch.com/ws/1.1/track.search?format=json&f_music_genre_id=1127&apikey=\(MusixMatchApiKey)&page=1&page_size=10"
+        updateSearchURL()
         getSongs()
-        //print("\(Songs)")
+    }
+    
+    func updateSearchURL() {
+        MusixMatchSearchURL = "https://api.musixmatch.com/ws/1.1/track.search?format=json&f_music_genre_id=1127&apikey=\(MusixMatchApiKey)&page=\(page!)&page_size=10"
     }
     
     func getSongs() {
@@ -70,10 +81,7 @@ class TableViewController: UITableViewController, UIGestureRecognizerDelegate {
             let track_list = body["track_list"] as? [Dictionary<String, Any>],
             track_list.count > 0
             else {
-            DispatchQueue.main.async {
-                //self.FoodNameLabel.text = "No recipe found."
-            }
-            print("error: invalid JSON data")
+                print("error: invalid JSON data")
                 return
         }
         
@@ -91,9 +99,10 @@ class TableViewController: UITableViewController, UIGestureRecognizerDelegate {
                     return
             }
             Songs.append(SongItem(Title: track_name, Artist: artist_name, Album: album_name))
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+        }
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
 

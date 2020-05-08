@@ -250,7 +250,7 @@
             </objects>
             <point key="canvasLocation" x="747.82608695652175" y="724.55357142857144"/>
         </scene>
-        <!--Titles-->
+        <!--Recommendations-->
         <scene sceneID="IMa-vZ-X9l">
             <objects>
                 <tableViewController id="moP-US-fn6" customClass="TableViewController" customModule="Castor" customModuleProvider="target" sceneMemberID="viewController">
@@ -322,7 +322,13 @@
                             <outlet property="delegate" destination="moP-US-fn6" id="hr4-K5-MUX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Titles" prompt="Stress Relieving Songs" id="ood-nR-hNb"/>
+                    <navigationItem key="navigationItem" title="Recommendations" prompt="Stress Relieving Songs" id="ood-nR-hNb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="d4c-fV-h6i">
+                            <connections>
+                                <action selector="RefreshTapped:" destination="moP-US-fn6" id="Kpv-ei-X9K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJN-MD-Eam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="Tqr-6D-wYu">
