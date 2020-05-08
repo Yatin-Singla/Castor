@@ -18,8 +18,7 @@ class LoginPageViewController: UIViewController {
     @IBOutlet var facebookButton: UIButton!
     @IBOutlet var backButton: UIButton!
     
-    //private let backgroundColor = HelperDarkMode.mainThemeBackgroundColor
-    private let tintColor = UIColor(red: 1.00, green: 0.35, blue: 0.40, alpha: 1.00)
+    private let tintColor = UIColor(red: 0.15, green: 0.27, blue: 0.33, alpha: 1.00)
     private let titleFont = UIFont.boldSystemFont(ofSize: 30)
     private let buttonFont = UIFont.boldSystemFont(ofSize: 20)
     
@@ -43,7 +42,7 @@ class LoginPageViewController: UIViewController {
         
         titleLabel.font = titleFont
         titleLabel.text = "Log In"
-        titleLabel.textColor = tintColor
+        titleLabel.textColor = .white
         
         emailTextField.configure(color: textFieldColor,
                                         font: textFieldFont,
@@ -62,7 +61,7 @@ class LoginPageViewController: UIViewController {
         passwordTextField.clipsToBounds = true
         
         separatorLabel.font = separatorFont
-        separatorLabel.textColor = separatorTextColor
+        separatorLabel.textColor = .white
         separatorLabel.text = "OR"
         
         loginButton.setTitle("Log In", for: .normal)
@@ -77,12 +76,17 @@ class LoginPageViewController: UIViewController {
         facebookButton.configure(color: .white,
                                  font: buttonFont,
                                  cornerRadius: 55/2,
-                                 backgroundColor: UIColor(red: 0.20, green: 0.30, blue: 0.57, alpha: 1.00))
+                                 backgroundColor: .black)
+        //UIColor(red: 0.20, green: 0.30, blue: 0.57, alpha: 1.00)
     }
 
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     /*
     // MARK: - Navigation
