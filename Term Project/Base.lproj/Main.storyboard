@@ -117,29 +117,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HbH-Zr-vkU">
-                                <rect key="frame" x="0.0" y="44" width="414" height="414"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HbH-Zr-vkU">
+                                <rect key="frame" x="0.0" y="88" width="414" height="356"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HbH-Zr-vkU" secondAttribute="height" multiplier="414:414" id="NYE-oW-ItE"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddO-jc-Bkb">
-                                <rect key="frame" x="168.5" y="508" width="77" height="21"/>
+                                <rect key="frame" x="168.5" y="552" width="77" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf6-dp-3od">
-                                <rect key="frame" x="164" y="479" width="86.5" height="21"/>
+                                <rect key="frame" x="164" y="523" width="86.5" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4kJ-tR-Pd7">
-                                <rect key="frame" x="18" y="546" width="378" height="31"/>
+                                <rect key="frame" x="18" y="590" width="378" height="31"/>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prg-rf-uzw">
-                                <rect key="frame" x="168" y="602.5" width="78" height="79"/>
+                                <rect key="frame" x="168" y="646.5" width="78" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="78" id="95e-Y6-zbh"/>
                                     <constraint firstAttribute="height" constant="80" id="gY2-Qh-SKi"/>
@@ -151,7 +151,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXA-5M-8jX">
-                                <rect key="frame" x="282" y="623" width="38" height="38"/>
+                                <rect key="frame" x="282" y="667" width="38" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="38" id="DNp-ua-uVN"/>
                                     <constraint firstAttribute="height" constant="42" id="bWX-PP-Qyy"/>
@@ -163,7 +163,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as8-HJ-ziZ">
-                                <rect key="frame" x="96" y="623" width="36" height="38"/>
+                                <rect key="frame" x="96" y="667" width="36" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="3d9-vk-8YM"/>
                                     <constraint firstAttribute="width" constant="36" id="D85-DZ-aFA"/>
@@ -195,7 +195,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="prg-rf-uzw" firstAttribute="top" secondItem="4kJ-tR-Pd7" secondAttribute="bottom" constant="26" id="4R4-nZ-hlQ"/>
@@ -250,7 +250,7 @@
             </objects>
             <point key="canvasLocation" x="747.82608695652175" y="724.55357142857144"/>
         </scene>
-        <!--Recommendations-->
+        <!--Song Recommendations-->
         <scene sceneID="IMa-vZ-X9l">
             <objects>
                 <tableViewController id="moP-US-fn6" customClass="TableViewController" customModule="Castor" customModuleProvider="target" sceneMemberID="viewController">
@@ -322,22 +322,32 @@
                             <outlet property="delegate" destination="moP-US-fn6" id="hr4-K5-MUX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Recommendations" prompt="Stress Relieving Songs" id="ood-nR-hNb">
+                    <tabBarItem key="tabBarItem" title="Title" image="list.bullet.indent" catalog="system" id="wwM-tp-w6z"/>
+                    <navigationItem key="navigationItem" title="Song Recommendations" prompt="Castor" id="ood-nR-hNb">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="5GI-eb-haY">
+                            <connections>
+                                <segue destination="G7b-Wq-8LA" kind="unwind" unwindAction="unwindLogoutSegue:" id="O9i-Eo-Qid"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="d4c-fV-h6i">
                             <connections>
                                 <action selector="RefreshTapped:" destination="moP-US-fn6" id="Kpv-ei-X9K"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="NavItem" destination="ood-nR-hNb" id="RSf-MJ-1hI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJN-MD-Eam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="G7b-Wq-8LA" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="right" id="Tqr-6D-wYu">
                     <connections>
                         <action selector="HandleSwipe:" destination="moP-US-fn6" id="HMM-z2-YHS"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2442.0289855072465" y="724.55357142857144"/>
+            <point key="canvasLocation" x="1658" y="725"/>
         </scene>
         <!--Landing Page View Controller-->
         <scene sceneID="hge-Ml-l3N">
@@ -373,7 +383,7 @@
                                 </constraints>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="Cqi-c5-FUA" kind="show" id="zeF-Xv-2l9"/>
+                                    <segue destination="Cqi-c5-FUA" kind="show" identifier="LoginPageSegue" id="zeF-Xv-2l9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfL-XO-zQg">
@@ -471,6 +481,9 @@
                                     <constraint firstAttribute="height" constant="55" id="T6p-qt-zoC"/>
                                 </constraints>
                                 <state key="normal" title="Create Account"/>
+                                <connections>
+                                    <action selector="SignUpTapped:" destination="4Ke-of-D68" eventType="touchUpInside" id="b3s-zL-ibQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZX-Aa-s0n">
                                 <rect key="frame" x="20" y="88" width="18" height="22"/>
@@ -478,11 +491,12 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="arrow-back-icon"/>
                                 <connections>
-                                    <segue destination="Ncs-SM-IQj" kind="unwind" unwindAction="unwindSegueWithSender:" id="AwQ-HP-FbW"/>
+                                    <segue destination="Ncs-SM-IQj" kind="unwind" unwindAction="GestureUnwindSegueWithSender:" id="jQD-8i-LFG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="nZX-Aa-s0n" firstAttribute="leading" secondItem="HE6-lI-WcG" secondAttribute="leading" constant="20" id="2Ls-iw-CXe"/>
                             <constraint firstItem="AMQ-9w-q3C" firstAttribute="leading" secondItem="HE6-lI-WcG" secondAttribute="leading" constant="20" id="3He-DN-RFg"/>
@@ -508,6 +522,9 @@
                             <constraint firstItem="AMQ-9w-q3C" firstAttribute="centerX" secondItem="pih-gz-kef" secondAttribute="centerX" id="zyc-io-SG4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HE6-lI-WcG"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aaM-pi-PEZ" appends="YES" id="CNM-QE-Nog"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="8vI-qy-DE3"/>
                     <connections>
@@ -518,10 +535,16 @@
                         <outlet property="phoneNumberTextField" destination="AMQ-9w-q3C" id="bTo-nt-IU6"/>
                         <outlet property="signUpButton" destination="r6T-BD-Djt" id="tpA-pL-oDt"/>
                         <outlet property="titleLabel" destination="Dpp-AZ-NES" id="AAl-Zj-JgW"/>
+                        <segue destination="Ncs-SM-IQj" kind="unwind" identifier="SuccessfullyCreatedAccount" unwindAction="SuccessfullyCreatedAccountUnwindSegueWithSender:" id="w03-D5-aI9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVw-Ot-gmY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ncs-SM-IQj" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="aaM-pi-PEZ">
+                    <connections>
+                        <segue destination="Ncs-SM-IQj" kind="unwind" unwindAction="GestureUnwindSegueWithSender:" id="Qv3-lo-9uP"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-375.36231884057975" y="361.60714285714283"/>
         </scene>
@@ -564,6 +587,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="LogInTapped:" destination="Cqi-c5-FUA" eventType="touchUpInside" id="5c3-RY-Bhn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAh-P0-k31">
                                 <rect key="frame" x="69.5" y="583" width="275" height="55"/>
@@ -587,11 +613,12 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="arrow-back-icon"/>
                                 <connections>
-                                    <segue destination="CMd-w7-kLe" kind="unwind" unwindAction="unwindSegueWithSender:" id="1TL-D3-1oz"/>
+                                    <segue destination="CMd-w7-kLe" kind="unwind" unwindAction="GestureUnwindSegueWithSender:" id="xLE-6i-007"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="qmh-1b-4Ip" firstAttribute="leading" secondItem="Fs1-v8-0hW" secondAttribute="leading" constant="20" id="0kk-MG-6WX"/>
                             <constraint firstItem="BAh-P0-k31" firstAttribute="top" secondItem="0i1-Mx-Ug0" secondAttribute="bottom" constant="40" id="7Ol-Aw-huP"/>
@@ -613,6 +640,9 @@
                             <constraint firstItem="9xY-5u-Zd4" firstAttribute="leading" secondItem="Fs1-v8-0hW" secondAttribute="leading" constant="20" id="xsJ-5P-49y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fs1-v8-0hW"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="K6l-VZ-lcd" appends="YES" id="Fau-ed-Yeh"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="KgQ-Nj-WOA"/>
                     <connections>
@@ -623,9 +653,15 @@
                         <outlet property="passwordTextField" destination="qmh-1b-4Ip" id="SPW-qb-iJd"/>
                         <outlet property="separatorLabel" destination="0i1-Mx-Ug0" id="vTc-Jw-aK3"/>
                         <outlet property="titleLabel" destination="kKN-L5-6fY" id="liv-gT-Oub"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="LoginSegue" id="jvw-vH-LDh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5OT-a9-rZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="K6l-VZ-lcd">
+                    <connections>
+                        <segue destination="CMd-w7-kLe" kind="unwind" unwindAction="GestureUnwindSegueWithSender:" id="Nqb-w8-Jkv"/>
+                    </connections>
+                </swipeGestureRecognizer>
                 <exit id="CMd-w7-kLe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-375.36231884057975" y="-363.61607142857139"/>
@@ -634,6 +670,13 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" prompt="Castor" id="b1P-p9-VOI">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="gsT-v0-Tv3">
+                            <connections>
+                                <segue destination="Hnh-qF-O0X" kind="unwind" unwindAction="unwindLogoutSegue:" id="8rC-Fu-giT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -643,31 +686,13 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="dvy-Oo-GHo" kind="relationship" relationship="viewControllers" id="MsS-51-p77"/>
-                        <segue destination="ViE-r6-OCQ" kind="relationship" relationship="viewControllers" id="iJD-91-JEt"/>
+                        <segue destination="moP-US-fn6" kind="relationship" relationship="viewControllers" id="zev-kt-r2B"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+                <exit id="Hnh-qF-O0X" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="748" y="0.0"/>
-        </scene>
-        <!--Titles-->
-        <scene sceneID="NO9-rB-FyF">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ViE-r6-OCQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Titles" image="list.bullet.indent" catalog="system" id="4qi-aL-IEg"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="auK-cE-Sf1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="moP-US-fn6" kind="relationship" relationship="rootViewController" id="K7l-Z1-9GF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="09Z-Bf-VOu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1658" y="725"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cMU-wc-8LU">

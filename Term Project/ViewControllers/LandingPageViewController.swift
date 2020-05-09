@@ -24,6 +24,9 @@ class LandingPageViewController: UIViewController {
     private let SubtitleFont = UIFont.boldSystemFont(ofSize: 18)
     private let BtnFont = UIFont.boldSystemFont(ofSize: 24)
     
+    var UserEmail: String?
+    var UserPassword: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,7 +71,20 @@ class LandingPageViewController: UIViewController {
     }
     */
     
-    @IBAction func unwindSegue(sender: UIStoryboardSegue) {
+    @IBAction func GestureUnwindSegue(sender: UIStoryboardSegue) {
+        print("---------SENDER = \(sender.source)")
+    }
+    
+    @IBAction func SuccessfullyCreatedAccountUnwindSegue(sender: UIStoryboardSegue){
+        //performSegue(withIdentifier: "LoginPageSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LoginPageSegue" {
+            let LoginPageVC = segue.destination as! LoginPageViewController
+            LoginPageVC.UserEmail = self.UserEmail
+            LoginPageVC.UserPassword = self.UserPassword
+        }
     }
 
 }

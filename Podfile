@@ -9,7 +9,20 @@ target 'Term Project' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
-  # add pods for any other desired Firebase products
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'	  
+  pod 'FirebaseUI'
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Google'
+  pod 'FirebaseUI/Facebook'
+  pod 'FirebaseUI/OAuth'
+
+#Pods for LoginScreen
+#pod 'FacebookCore'
+#pod 'FacebookLogin'
+#pod 'GoogleSignIn'
+
+# add pods for any other desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
  
   # Pods for Term Project

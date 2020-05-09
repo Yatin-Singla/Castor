@@ -15,6 +15,8 @@ class TableViewController: UITableViewController, UIGestureRecognizerDelegate {
     var MusixMatchSearchURL: String!
     var page: Int! = 1
     
+    @IBOutlet weak var NavItem: UINavigationItem!
+    
     @IBAction func RefreshTapped(_ sender: UIBarButtonItem) {
         print("refresh tapped")
         self.page += 1
@@ -35,6 +37,10 @@ class TableViewController: UITableViewController, UIGestureRecognizerDelegate {
         tableView.rowHeight = 120
         updateSearchURL()
         getSongs()
+        let refreshBarButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(RefreshTapped))
+        navigationController?.navigationBar.topItem?.title = "Song Recommendations"
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = refreshBarButton
+        
     }
     
     func updateSearchURL() {
@@ -135,7 +141,15 @@ class TableViewController: UITableViewController, UIGestureRecognizerDelegate {
     {
             self.tabBarController?.selectedIndex -= 1
     }
-
     
+
+//    override func viewWillAppear(_ animated: Bool) {
+//      super.viewWillAppear(animated)
+//      self.navigationController?.setNavigationBarHidden(true, animated: false)
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        self.navigationController?.setNavigationBarHidden(false, animated: false)
+//    }
 
 }

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import FirebaseAuth
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UIGestureRecognizerDelegate, UITextFieldDelegate {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var backButton: UIButton!
     @IBOutlet var nameTextField: CustomTextField!
@@ -16,7 +17,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet var passwordTextField: CustomTextField!
     @IBOutlet var emailTextField: CustomTextField!
     @IBOutlet var signUpButton: UIButton!
-
+    
     private let tintColor = UIColor(red: 0.15, green: 0.27, blue: 0.33, alpha: 1.00)
     private let textFieldColor = UIColor(red: 0.69, green: 0.70, blue: 0.78, alpha: 1.00)
     
@@ -34,7 +35,10 @@ class SignUpViewController: UIViewController {
     }
     
     func initialize() {
-
+        passwordTextField.delegate = self
+        emailTextField.delegate = self
+        phoneNumberTextField.delegate = self
+        nameTextField.delegate = self
         titleLabel.font = titleFont
         titleLabel.text = "Sign Up"
         titleLabel.textColor = .white
@@ -91,6 +95,43 @@ class SignUpViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+
+    @IBAction func SignUpTapped(_ sender: UIButton) {
+        let email = emailTextField.text as! String
+        let password = passwordTextField.text as! String
+        Auth.auth().createUser(withEmail: email, password: password) {
+            authResult, error in
+            if let err = error {
+                let alert = UIAlertController(title: "Error",
+                                              message: err.localizedDescription, preferredStyle: .alert)
+                let tryAgainAction = UIAlertAction(title: "Let's try again?", style: .default,
+                                             handler: { (action) in
+                                                // execute some code when this option is selected
+                                                print("Let's try again?")
+                                            })
+                alert.addAction(tryAgainAction)
+                self.present(alert, animated: true, completion: nil)
+            } else {
+                //prepare segue
+                self.performSegue(withIdentifier: "SuccessfullyCreatedAccount", sender: self)
+            }
+            
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "SuccessfullyCreatedAccount") {
+            let LandingPageVC = segue.destination as! LandingPageViewController
+            LandingPageVC.UserEmail = self.emailTextField.text
+            LandingPageVC.UserPassword = self.passwordTextField.text
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
     }
     /*
     // MARK: - Navigation

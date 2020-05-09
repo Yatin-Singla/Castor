@@ -59,6 +59,8 @@ class ExerciseViewController: UIViewController, UIGestureRecognizerDelegate {
         LoginBtn.adjustsImageWhenHighlighted = false
         LoginBtn.setImage(UIImage(named: "spotifylogo-32.png"), for: .normal)
         isHidden(value: true)
+        LoginBtn.layer.cornerRadius = 5
+        navigationController?.navigationBar.topItem?.title = "Play Music"
     }
 
     func isHidden(value: Bool){

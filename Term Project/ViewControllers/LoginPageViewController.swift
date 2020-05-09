@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import FirebaseAuth
 
-class LoginPageViewController: UIViewController {
+class LoginPageViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var passwordTextField: CustomTextField!
@@ -17,6 +18,7 @@ class LoginPageViewController: UIViewController {
     @IBOutlet var separatorLabel: UILabel!
     @IBOutlet var facebookButton: UIButton!
     @IBOutlet var backButton: UIButton!
+    
     
     private let tintColor = UIColor(red: 0.15, green: 0.27, blue: 0.33, alpha: 1.00)
     private let titleFont = UIFont.boldSystemFont(ofSize: 30)
@@ -29,15 +31,25 @@ class LoginPageViewController: UIViewController {
     private let separatorFont = UIFont.boldSystemFont(ofSize: 14)
     private let separatorTextColor = UIColor(red: 0.27, green: 0.27, blue: 0.27, alpha: 1.00)
     
+    var UserEmail: String?
+    var UserPassword: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         initialize()
+        if UserEmail != nil {
+            emailTextField.text = UserEmail!
+        }
+        if UserPassword != nil {
+            passwordTextField.text = UserPassword!
+        }
     }
     
     func initialize() {
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         backButton.tintColor = UIColor(red: 0.16, green: 0.18, blue: 0.31, alpha: 1.00)
         
         titleLabel.font = titleFont
@@ -87,6 +99,36 @@ class LoginPageViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    @IBAction func unwindLogoutSegue(_ sender: UIStoryboardSegue) {
+        // Sign out current user
+        try? Auth.auth().signOut()
+    }
+    
+    @IBAction func LogInTapped(_ sender: UIButton) {
+        // Sign in (existing user)
+        Auth.auth().signIn(withEmail: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        { authResult, error in
+            if let err = error {
+                let alert = UIAlertController(title: "Error",
+                                              message: err.localizedDescription, preferredStyle: .alert)
+                let tryAgainAction = UIAlertAction(title: "Let's try again?", style: .default,
+                                             handler: { (action) in
+                                                // execute some code when this option is selected
+                                                print("Let's try again?")
+                                            })
+                alert.addAction(tryAgainAction)
+                self.present(alert, animated: true, completion: nil)
+            } else {
+                self.performSegue(withIdentifier: "LoginSegue", sender: self)
+            }
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
     }
     /*
     // MARK: - Navigation

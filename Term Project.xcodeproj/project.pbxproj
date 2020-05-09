@@ -17,6 +17,8 @@
 		A94E979C2465C88900A40D8E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E979B2465C88900A40D8E /* UIButton.swift */; };
 		A94E979E2465C90200A40D8E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E979D2465C90200A40D8E /* CustomTextField.swift */; };
 		A94E97A12465CB5C00A40D8E /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E97A02465CB5C00A40D8E /* LandingPageViewController.swift */; };
+		A94E97A32465DD5A00A40D8E /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E97A22465DD5A00A40D8E /* LoginPageViewController.swift */; };
+		A94E97A52465EB5500A40D8E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E97A42465EB5500A40D8E /* SignUpViewController.swift */; };
 		A9D4CA1C246155CC0021B232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CA1B246155CC0021B232 /* AppDelegate.swift */; };
 		A9D4CA1E246155CC0021B232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CA1D246155CC0021B232 /* SceneDelegate.swift */; };
 		A9D4CA20246155CC0021B232 /* StressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CA1F246155CC0021B232 /* StressViewController.swift */; };
@@ -39,6 +41,8 @@
 		A94E979B2465C88900A40D8E /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		A94E979D2465C90200A40D8E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		A94E97A02465CB5C00A40D8E /* LandingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
+		A94E97A22465DD5A00A40D8E /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		A94E97A42465EB5500A40D8E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A9D4CA18246155CC0021B232 /* Castor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Castor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D4CA1B246155CC0021B232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9D4CA1D246155CC0021B232 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,8 +96,19 @@
 				A9D4CA3624615ADF0021B232 /* ExerciseViewController.swift */,
 				A94E979024648AD600A40D8E /* TableViewController.swift */,
 				A94E97A02465CB5C00A40D8E /* LandingPageViewController.swift */,
+				A94E97A22465DD5A00A40D8E /* LoginPageViewController.swift */,
+				A94E97A42465EB5500A40D8E /* SignUpViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A94E97A6246606C500A40D8E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A94E979224648EA600A40D8E /* TableViewCell.swift */,
+				A94E97942464935200A40D8E /* SongItem.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		A9D4CA0F246155CC0021B232 = {
@@ -117,12 +132,11 @@
 		A9D4CA1A246155CC0021B232 /* Term Project */ = {
 			isa = PBXGroup;
 			children = (
+				A94E97A6246606C500A40D8E /* Classes */,
 				A94E97982465C7E900A40D8E /* Controls */,
 				A94E979F2465C92C00A40D8E /* ViewControllers */,
 				A9D4CA1B246155CC0021B232 /* AppDelegate.swift */,
 				A9D4CA1D246155CC0021B232 /* SceneDelegate.swift */,
-				A94E979224648EA600A40D8E /* TableViewCell.swift */,
-				A94E97942464935200A40D8E /* SongItem.swift */,
 				A9D4CA23246155CC0021B232 /* Main.storyboard */,
 				A9D4CA29246155D20021B232 /* Assets.xcassets */,
 				A94E972A2464337A00A40D8E /* spotifylogo-32.png */,
@@ -155,6 +169,7 @@
 				A9D4CA15246155CC0021B232 /* Frameworks */,
 				A9D4CA16246155CC0021B232 /* Resources */,
 				66C4F35B7CA9870770167439 /* [CP] Embed Pods Frameworks */,
+				8752428D24D2C51677EB00F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,6 +246,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Term Project/Pods-Term Project-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8752428D24D2C51677EB00F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Term Project/Pods-Term Project-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Term Project/Pods-Term Project-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Term Project/Pods-Term Project-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BDC6836027425134C999A4C9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -265,9 +297,11 @@
 				A94E979A2465C82300A40D8E /* UITextField.swift in Sources */,
 				A94E979324648EA600A40D8E /* TableViewCell.swift in Sources */,
 				A94E97A12465CB5C00A40D8E /* LandingPageViewController.swift in Sources */,
+				A94E97A32465DD5A00A40D8E /* LoginPageViewController.swift in Sources */,
 				A94E979124648AD600A40D8E /* TableViewController.swift in Sources */,
 				A9D4CA22246155CC0021B232 /* HealthViewController.swift in Sources */,
 				A94E97952464935200A40D8E /* SongItem.swift in Sources */,
+				A94E97A52465EB5500A40D8E /* SignUpViewController.swift in Sources */,
 				A9D4CA20246155CC0021B232 /* StressViewController.swift in Sources */,
 				A9D4CA1C246155CC0021B232 /* AppDelegate.swift in Sources */,
 				A94E979C2465C88900A40D8E /* UIButton.swift in Sources */,
