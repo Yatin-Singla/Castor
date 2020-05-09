@@ -114,8 +114,15 @@ class SignUpViewController: UIViewController, UIGestureRecognizerDelegate, UITex
                 alert.addAction(tryAgainAction)
                 self.present(alert, animated: true, completion: nil)
             } else {
-                //prepare segue
-                self.performSegue(withIdentifier: "SuccessfullyCreatedAccount", sender: self)
+                let alert = UIAlertController(title: "Success!", message: "Your account was successfully created", preferredStyle: .alert)
+                let OKAction = UIAlertAction(title: "OK", style: .default,
+                                              handler: { (action) in
+                                                 // execute some code when this option is selected
+                                                 print("Account created successfullt")
+                                                 self.performSegue(withIdentifier: "SuccessfullyCreatedAccount", sender: self)
+                                             })
+                 alert.addAction(OKAction)
+                 self.present(alert, animated: true, completion: nil)
             }
             
         }

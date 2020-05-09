@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class LoginPageViewController: UIViewController, UIGestureRecognizerDelegate {
+class LoginPageViewController: UIViewController, UIGestureRecognizerDelegate, UITextFieldDelegate {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var passwordTextField: CustomTextField!
