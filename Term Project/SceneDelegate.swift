@@ -25,8 +25,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UNUserNotificationCente
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
         print("user responded to notification")
         // Do stuff with response here (non-blocking)
-        let tabVC = self.window?.rootViewController as! UITabBarController
-        if let mainVC = tabVC.viewControllers![0] as? StressViewController {
+        let navVC = UIApplication.shared.windows.first!.rootViewController as! UINavigationController
+        if let mainVC = navVC.topViewController as? StressViewController {
+            print("Handling foreground respone")
             mainVC.handleNotification(response)
         }
         completionHandler()
@@ -35,8 +36,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UNUserNotificationCente
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification, withCompletionHandler
         completionHandler: @escaping (UNNotificationPresentationOptions)
-        -> Void)
-    {
+        -> Void) {
         print("received notification while in foreground; display?")
         completionHandler([.alert]) // no options ([]) means no notification
     }

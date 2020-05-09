@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseCrashlytics
+import Crashlytics
 
 class LoginPageViewController: UIViewController, UIGestureRecognizerDelegate, UITextFieldDelegate {
 
@@ -108,7 +110,9 @@ class LoginPageViewController: UIViewController, UIGestureRecognizerDelegate, UI
     
     @IBAction func LogInTapped(_ sender: UIButton) {
         // Sign in (existing user)
-        Auth.auth().signIn(withEmail: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        UserEmail = emailTextField.text
+        UserPassword = passwordTextField.text
+        Auth.auth().signIn(withEmail: UserEmail ?? "", password: UserPassword ?? "")
         { authResult, error in
             if let err = error {
                 let alert = UIAlertController(title: "Error",
@@ -121,6 +125,10 @@ class LoginPageViewController: UIViewController, UIGestureRecognizerDelegate, UI
                 alert.addAction(tryAgainAction)
                 self.present(alert, animated: true, completion: nil)
             } else {
+                Crashlytics.sharedInstance().setUserIdentifier(Auth.auth().currentUser!.uid)
+                Crashlytics.sharedInstance().setUserEmail(self.UserEmail)
+                Crashlytics.sharedInstance().setUserName(Auth.auth().currentUser!.displayName)
+                Crashlytics.crashlytics().setUserID(Auth.auth().currentUser!.uid)
                 self.performSegue(withIdentifier: "LoginSegue", sender: self)
             }
         }

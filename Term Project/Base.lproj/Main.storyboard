@@ -253,7 +253,7 @@
         <!--Song Recommendations-->
         <scene sceneID="IMa-vZ-X9l">
             <objects>
-                <tableViewController id="moP-US-fn6" customClass="TableViewController" customModule="Castor" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SongList" id="moP-US-fn6" customClass="TableViewController" customModule="Castor" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tB2-uC-XJA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

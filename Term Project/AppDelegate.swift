@@ -33,8 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         print("user responded to notification")
         // Do stuff with response here (non-blocking)
         let navVC = UIApplication.shared.windows.first!.rootViewController as!
-        UITabBarController
-        if let mainVC = navVC.viewControllers![0] as? StressViewController {
+        UINavigationController
+        if let mainVC = navVC.topViewController as? StressViewController {
+            print("Handling foreground respone")
             mainVC.handleNotification(response)
         }
         completionHandler()

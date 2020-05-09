@@ -6,6 +6,7 @@ target 'Term Project' do
   use_frameworks!
  
   # add the Firebase pod for Google Analytics
+  pod 'Firebase/Crashlytics'
   pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
@@ -16,6 +17,8 @@ target 'Term Project' do
   pod 'FirebaseUI/Google'
   pod 'FirebaseUI/Facebook'
   pod 'FirebaseUI/OAuth'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
 #Pods for LoginScreen
 #pod 'FacebookCore'
